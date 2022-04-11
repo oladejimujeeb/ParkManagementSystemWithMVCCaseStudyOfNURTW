@@ -1,0 +1,33 @@
+@model System.Collections.Generic.IEnumerable<PackManagementSystem.DTOs.DriverDto.DriverDto>
+
+@{
+    ViewBag.Title = "All Drivers";
+}
+<div>
+<table class= "table">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Phone Number</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Delete Driver</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var driver in Model)
+    {
+        <tr>
+            <th>@driver.Firstname @driver.Surname</th>
+            <th>@driver.PhoneNumber</th>
+            <th>@driver.Address</th>
+            <th>@driver.Email</th>
+            <th><a asp-action="DeleteDriver" asp-route-Id="@driver.Id" class="btn btn-danger">Delete</a></th>
+        </tr>
+    }
+    </tbody>
+</table>
+    <div>
+        <div><a asp-action="StaffMenu" class="btn badge-success">Home Page</a></div>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+@model System.Collections.Generic.IList<PackManagementSystem.DTOs.StaffDto.StaffDto>
+
+@{
+    ViewBag.Title = "All staff";
+}
+<div>
+    <a asp-controller="Admin" asp-action="AdminMenu" class="btn btn-secondary">Home</a>
+</div>
+<div>
+    <table class= "table">
+        <thead>
+        <tr>
+            <th>Staff Name</th>
+            <th>Phone Number</th>
+            <th>Address</th>
+            <th>Email</th>
+            <th>Staff Id</th>
+            <th>Dob</th>
+            <th>Delete Staff</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var admin in Model)
+        {
+            <tr>
+                <th>@admin.Firstname @admin.Surname</th>
+                <th>@admin.PhoneNumber</th>
+                <th>@admin.Address</th>
+                <th>@admin.Email</th>
+                <th>@admin.StaffId</th>
+                <th>@admin.Dob</th>
+                <th><a asp-action="DeleteStaff" asp-route-Id="@admin.Id" class="btn btn-danger">Delete</a></th>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

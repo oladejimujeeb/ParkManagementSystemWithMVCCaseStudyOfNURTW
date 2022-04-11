@@ -1,0 +1,49 @@
+@model IEnumerable<PackManagementSystem.DTOs.PaymentDto.PaymentDto>
+
+@{
+    ViewBag.Title = "Payment History";
+    Layout = "_Layout";
+}
+
+ @if(!string.IsNullOrEmpty(ViewBag.Nopayment))
+        {
+            <div>
+                <p class="alert alert-warning alert-dismissible" role="alert">@ViewBag.Nopayment</p>
+            </div>
+        }
+
+<div>
+    <table class= "table">
+        <thead>
+        <tr>
+            <th>Driver ID</th>
+            <th>Car Id</th>
+            <th>Car Name</th>
+            <th>Park Name</th>
+            <th>Amount</th>
+            <th>Day Paid</th>
+            <th>Payment Date</th>
+            <th>Expired date</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var pay in Model)
+        {
+            <tr>
+                <th>@pay.DivId</th>
+                <th>@pay.MotorId</th>
+                <th>@pay.CarName</th>
+                <th>@pay.ParkName</th>
+                <th>@pay.Amount</th>
+                <th>@pay.PaymentPeriod</th>
+                <th>@pay.PaymentDate</th>
+                <th>@pay.ExpiryDate</th>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
+
+<div style="margin: 20px">
+    <a asp-action="DriverIndex" style="display: flex; background-color: green; justify-content: center; border-radius: 10px; color: white">Go Back</a>
+</div>

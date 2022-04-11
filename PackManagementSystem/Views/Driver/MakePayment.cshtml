@@ -1,0 +1,33 @@
+@model  PackManagementSystem.DTOs.MotorDto.MotorRequestModel
+
+@{
+    ViewBag.Title = "Make Payment";
+    Layout = "_Layout";
+}
+<h2 style="justify-content: center; font-family: 'Segoe UI',serif; color: #1861ac">Process to make your payment</h2>
+<div>
+    <form asp-action="MakePayment">
+        <div>
+            <label>Payment days</label>
+            <input type="number" min="1" name="PaymentPeriod" required>
+        </div>
+        <div style="margin: 20px">
+            <input type="submit" value="Confirm Payment" class="btn btn-success">
+        </div>
+    </form>
+</div>
+     @if(!string.IsNullOrEmpty(ViewBag.PaymentConfirmed))
+     {
+        <div>
+            <p class="alert alert-warning alert-dismissible" role="alert">@ViewBag.PaymentConfirmed</p>
+        </div>
+     }
+    @if(!string.IsNullOrEmpty(ViewBag.PayFailed))
+    {
+        <div>
+            <p class="alert alert-warning alert-dismissible" role="alert">@ViewBag.PayFailed</p>
+        </div>
+    }
+<div style="align-content: center">
+    <button style="background: #1861ac; color: white; border-radius: 10px" ><a asp-controller="Driver" asp-action="DriverIndex" style="color: white">Go Back</a></button>
+</div>

@@ -1,0 +1,34 @@
+@model PackManagementSystem.Entities.Admin
+
+@{
+    ViewBag.Title = "update";
+}
+<div>
+    <form asp-action="UpdateAdmin">
+        <div>
+            <label style="padding-right:150px">First Name</label>
+            <input type="text" name="FirstName" VALUE="@Model.Firstname" required>
+        </div>
+        <div>
+            <label style="padding-right:150px">Last Name</label>
+            <input type="text" name="Surname" VALUE="@Model.Lastname" required>
+        </div>
+        <div>
+            <label style="padding-right:90px">Telephone number</label>
+            <input type="number" name="Tel" VALUE="@Model.PhoneNumber" required>
+        </div>
+        <div>
+            <label style="padding-right:180px">Email</label>
+            <input type="email" name="Email" value="@Model.Email" required>
+        </div>
+        <div>
+            <label style="padding-right:150px">Password</label>
+            <input type="password" name="Password" VALUE="@Model.Password" required>
+        </div>
+        
+        <div>
+            <input type="submit"  value="Update" class="btn btn-primary" required>
+        </div>
+        
+    </form>
+</div>

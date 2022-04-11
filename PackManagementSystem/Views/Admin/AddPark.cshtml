@@ -1,0 +1,19 @@
+
+@{
+    ViewBag.Title = "update";
+}
+<div class="align-content-around">
+    <form asp-action="AddPark">
+        <div>
+            <label style="padding-right: 90px">Park Name</label>
+            <input type="text" name="ParkName" placeholder="park name" required>
+        </div>
+        <div>
+            <label style="padding-right: 90px">Park Price</label>
+            <input type="number" name="ParkPrice" placeholder="park price" required>
+        </div>
+        <div>
+            <input type="submit" value="Add Park" class="btn btn-outline-success">
+        </div>
+    </form>
+</div>

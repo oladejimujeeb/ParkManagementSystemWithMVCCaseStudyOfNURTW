@@ -1,0 +1,27 @@
+@model PackManagementSystem.DTOs.DriverDto.DriverRequestModel
+@{
+    ViewData["Title"] = "Add Staff";
+}
+<div>
+    <form asp-action="RegisterCar">
+        <div>
+            <label>Car Name</label>
+            <input type="text" name="CarName" required>
+        </div>
+        <div>
+            <label>Car Type</label>
+            <input type="text" name="CarType" required>
+        </div>
+        <div>
+            <label>No Of Seater</label>
+            <input type="number" name="NoOfSeater" required>
+        </div>
+        <div>
+            <label>Park</label>
+            <select asp-for="ParkId" asp-items="ViewBag.Parks"></select>
+        </div>
+        <div>
+            <input type="submit" value="submit" class="btn btn-outline-success">
+        </div>
+    </form>
+</div>

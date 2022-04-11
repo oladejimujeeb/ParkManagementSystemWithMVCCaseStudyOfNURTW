@@ -1,0 +1,27 @@
+@model IEnumerable<PackManagementSystem.DTOs.ParkDto.ParkDto>
+@{
+    ViewData["Title"] = "All Parks";
+}
+<div>
+    <table class="table">
+        <thrad>
+            <tr>
+                <th>Park Name</th>
+                <th>Park Price</th>
+                <th>Delete Park</th>
+                <th>Update Park</th>
+            </tr>
+        </thrad>
+        <tbody>
+        @foreach (var park in Model)
+        {
+            <tr>
+                <th>@park.ParkName</th>
+                <th>@park.ParkPrice</th>
+                <th><a class="btn badge-danger" asp-action="DeletePark" asp-route-Id="@park.Id">Delete</a></th>
+                <th><a class="btn btn-dark" asp-action="UpdatePark" asp-route-Id="@park.Id">Update</a></th>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

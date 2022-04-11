@@ -1,0 +1,44 @@
+@model IEnumerable<PackManagementSystem.DTOs.StaffDto.StaffDto>
+@using Microsoft.AspNetCore.Http
+@{
+    ViewData["Title"] = "Staff";
+}
+ @if (!string.IsNullOrEmpty(ViewBag.staffInfo))
+ {
+     <div>
+         <p class="alert alert-warning alert-dismissible" role="alert">Welcome back</p>
+         <p class="alert alert-warning alert-dismissible" role="alert">Dear @ViewBag.staffInfo ,</p>
+     </div>
+ }
+
+<div style="padding:10px">
+    <table class="table table-bordered">
+        <thead>
+        </thead>
+        <tbody>
+        <tr>
+            <th><form asp-action="CheckPaymentByDate">
+                <div>
+                    <label>Check Payment</label>
+                    <input type="date" name="PaymentDate" placeholder="payment date     " required>
+                </div>
+                <div>
+                     <input type="submit" value="submit" class="btn btn-primary">
+                </div>
+            </form></th>
+            <th><a asp-controller="Staff" asp-action="AllDrivers" class="btn btn-outline-primary">All Drivers</a></th>
+            <th><form asp-action="CheckPaymentByEmail">
+                <div>
+                    <label>Check payment with Email</label>
+                    <input type="email" name="Email" placeholder="driver email     " required>
+                </div>
+                <div>
+                    <input type="submit" value="submit" class="btn btn-primary">
+                </div>
+            </form>
+            </th>
+        </tr>
+        </tbody>
+    </table>
+</div>
+

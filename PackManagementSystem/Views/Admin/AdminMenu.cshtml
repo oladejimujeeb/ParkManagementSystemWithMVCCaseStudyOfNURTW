@@ -1,0 +1,88 @@
+@model IEnumerable<PackManagementSystem.DTOs.AdminDto.AdminDto>
+@using Microsoft.AspNetCore.Http
+@{
+    ViewData["Title"] = "Admin";
+}
+<div>
+    <p class="alert alert-warning alert-dismissible" role="alert">Login Successful</p>
+    <p class="alert alert-warning alert-dismissible" role="alert">Dear @Context.Session.GetString("firstname"),</p>
+</div>
+@if (!string.IsNullOrEmpty(ViewBag.SuperAdmin))
+{
+    <div>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Admin Name</th>
+                <th>Admin Tel</th>
+                <th>Delete Admin</th>
+                <th>Update Admin</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var admin in Model)
+            {
+                <tr>
+                    <th>@admin.Surname</th>
+                    <th>@admin.Tel</th>
+                    <th><a asp-action="DeleteAdmin" asp-route-Id="@admin.Id" class="btn btn-success">Delete</a></th>
+                    <th><a asp-action="UpdateAdmin" asp-route-id="@admin.Id" class="btn btn-primary">Update</a></th>
+                </tr>
+            }
+            </tbody>
+        </table>
+        <div style="padding:10px">
+            <table class="table table-bordered">
+                <tbody>
+                <tr>
+                    <th><a asp-controller="Admin" asp-action="AddPark" class="btn btn-outline-primary">Add Park</a></th>
+                    <th><a asp-controller="Admin" asp-action="AllParks" class="btn btn-outline-primary">All Parks</a></th>
+                    <th><a asp-controller="Admin" asp-action="AddStaff" class="btn btn-outline-success ">Add Staff</a></th>
+                    <th><a asp-controller="Admin" asp-action="AllStaff" class="btn btn-outline-success">Get All staff</a></th>
+                    <th><a asp-controller="Admin" asp-action="SignUp" class="btn btn-outline-danger">Add New Admin</a></th>
+                    <th><a asp-controller="Admin" asp-action="LogOut" class="btn btn-outline-danger">Log out</a></th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+}
+@if (string.IsNullOrEmpty(ViewBag.SuperAdmin))
+{
+    <div>
+        <table class= "table">
+            <thead>
+            <tr>
+                <th>Admin Name</th>
+                <th>Admin Tel</th>
+                <th>Update Admin</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var admin in Model)
+            {
+                <tr>
+                    <th>@admin.Surname</th>
+                    <th>@admin.Tel</th>
+                    <th><a asp-action="UpdateAdmin" asp-route-id="@admin.Id" class="btn btn-primary">Update</a></th>
+                </tr>
+            }
+            </tbody>
+        </table>
+        <div style="padding:10px">
+            <table class="table table-bordered">
+                <tbody>
+                <tr>
+                    <th><a asp-controller="Admin" asp-action="AddPark" class="btn btn-outline-primary">Add Park</a></th>
+                    <th><a asp-controller="Admin" asp-action="AllParks" class="btn btn-outline-primary">All Parks</a></th>
+                    <th><a asp-controller="Admin" asp-action="AddStaff" class="btn btn-outline-success ">Add Staff</a></th>
+                    <th><a asp-controller="Admin" asp-action="AllStaff" class="btn btn-outline-success">Get All staff</a></th>
+                    <th><a asp-controller="Admin" asp-action="LogOut" class="btn btn-outline-danger">Log Out</a></th>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+}

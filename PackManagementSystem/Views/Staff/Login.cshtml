@@ -1,0 +1,29 @@
+@model PackManagementSystem.Entities.Staff
+@{
+    ViewData["Title"] = "Staff Login";
+}
+<body>
+<div>
+    <form asp-action="Login">
+        
+        @if(!string.IsNullOrEmpty(ViewBag.Message))
+        {
+            <div>
+                <p class="alert alert-warning alert-dismissible" role="alert">@ViewBag.Message</p>
+            </div>
+        }
+        
+        <div>
+            <label style="padding-right: 90px">Email</label>
+            <input asp-for="Email" type="email" name="Email"  placeholder="email" required>
+        </div>
+        <div>
+            <label style="padding-right: 60px">Password</label>
+            <input type="password" name="StaffId" placeholder="password" required>
+        </div>
+        <div>
+            <input type="submit" value="submit" class="btn btn-primary">
+        </div>
+    </form>
+</div>
+</body>
