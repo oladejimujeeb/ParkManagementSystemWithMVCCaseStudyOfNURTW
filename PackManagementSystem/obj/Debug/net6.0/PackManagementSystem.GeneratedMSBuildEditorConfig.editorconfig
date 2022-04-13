@@ -63,6 +63,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cVXBkYXRlUGFyay5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/User/Desktop/code learners hub/PackManagementSystem/PackManagementSystem/Views/Driver/CheckPaymentHistory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHJpdmVyXENoZWNrUGF5bWVudEhpc3RvcnkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/User/Desktop/code learners hub/PackManagementSystem/PackManagementSystem/Views/Driver/DriverIndex.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHJpdmVyXERyaXZlckluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -71,8 +75,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHJpdmVyXExvZ2luLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/User/Desktop/code learners hub/PackManagementSystem/PackManagementSystem/Views/Driver/MakePayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHJpdmVyXE1ha2VQYXltZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/code learners hub/PackManagementSystem/PackManagementSystem/Views/Driver/RegisterCar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHJpdmVyXFJlZ2lzdGVyQ2FyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/User/Desktop/code learners hub/PackManagementSystem/PackManagementSystem/Views/Driver/SignUp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHJpdmVyXFNpZ25VcC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/code learners hub/PackManagementSystem/PackManagementSystem/Views/Driver/UpdateDriver.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRHJpdmVyXFVwZGF0ZURyaXZlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/Desktop/code learners hub/PackManagementSystem/PackManagementSystem/Views/Home/Index.cshtml]
@@ -97,6 +113,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/User/Desktop/code learners hub/PackManagementSystem/PackManagementSystem/Views/Staff/AllDrivers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcQWxsRHJpdmVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/code learners hub/PackManagementSystem/PackManagementSystem/Views/Staff/CheckPaymentByDate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcQ2hlY2tQYXltZW50QnlEYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/Desktop/code learners hub/PackManagementSystem/PackManagementSystem/Views/Staff/CheckPaymentByEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhZmZcQ2hlY2tQYXltZW50QnlFbWFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/Desktop/code learners hub/PackManagementSystem/PackManagementSystem/Views/Staff/Login.cshtml]

@@ -149,24 +149,6 @@ namespace PackManagementSystem.Controllers
             if (pay.Status)
             {
                 ViewBag.PaymentConfirmed = $"Paid, Amount: #{pay.Data.Amount}, Expired on:{pay.Data.ExpiryDate}";
-                /*MailAddress to = new MailAddress("monsuratsalaudeen03@gmail.com");
-                MailAddress from = new MailAddress("oladejimujib@gmail.com");
-                MailMessage message = new MailMessage(from, to);
-                message.Subject = "Payment Confirmed";
-                message.Body = ViewBag.PaymentConfirmed;
-                SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
-                System.Net.NetworkCredential basicCredential1 = new System.Net.NetworkCredential("yourmail id", "Password");  
-                client.EnableSsl = true;  
-                client.UseDefaultCredentials = false;  
-                client.Credentials = basicCredential1; 
-                try
-                {
-                    client.Send(message);
-                }
-                catch (SmtpException ex)
-                {
-                    Console.WriteLine(ex.ToString());
-                }*/
                 return View();
                 
             }
